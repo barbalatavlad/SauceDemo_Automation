@@ -1,11 +1,11 @@
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.*;
 
-public class End2EndTest extends BaseTest{
+public class End2EndTest extends BaseTest {
+
     @Test
-    public void buyProductTest(){
+    public void buyProductTest() {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.inputUsername();
         loginPage.inputPassword();
@@ -26,7 +26,7 @@ public class End2EndTest extends BaseTest{
         ThankYouPage thankYouPage = new ThankYouPage(driver);
         String actualMessage = thankYouPage.getThankYouMessage();
         String expectedMessage = "Thank you for your order!";
-        Assert.assertEquals(actualMessage,expectedMessage);
+        Assert.assertEquals(actualMessage, expectedMessage);
         thankYouPage.clickBackToHomepage();
     }
 }

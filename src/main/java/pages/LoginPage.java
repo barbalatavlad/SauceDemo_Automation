@@ -7,12 +7,16 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class LoginPage extends BasePage {
+
     @FindBy(css = "#user-name")
     WebElement username;
+
     @FindBy(css = "#password")
     WebElement password;
+
     @FindBy(css = "#login-button")
     WebElement loginButton;
+
     @FindBy(css = "#react-burger-menu-btn")
     WebElement hamburgerMenu;
 
@@ -43,8 +47,8 @@ public class LoginPage extends BasePage {
     public String getLoginLogo() {
         return driver.findElement(By.xpath("//div[@class='login_logo']")).getText();
     }
-    public String getLoginButtonColour(){
+
+    public String getLoginButtonColour() {
         return driver.findElement(By.cssSelector("#login-button")).getCssValue("background-color");
     }
-
 }

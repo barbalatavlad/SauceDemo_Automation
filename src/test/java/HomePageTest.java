@@ -3,9 +3,10 @@ import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
 
-public class HomePageTest extends BaseTest{
+public class HomePageTest extends BaseTest {
+
     @Test
-    public void getProductImagesNumberTest(){
+    public void getProductImagesNumberTest() {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.inputUsername();
         loginPage.inputPassword();
@@ -13,6 +14,6 @@ public class HomePageTest extends BaseTest{
         HomePage homePage = new HomePage(driver);
         int expectedNumber = 6;
         int actualNumber = homePage.getProductImagesNumber();
-        Assert.assertEquals(actualNumber,expectedNumber);
+        Assert.assertEquals(actualNumber, expectedNumber);
     }
 }

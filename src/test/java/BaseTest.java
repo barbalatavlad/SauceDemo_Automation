@@ -5,14 +5,12 @@ import org.testng.annotations.BeforeTest;
 
 public class BaseTest {
 
-   protected WebDriver driver;
+    protected WebDriver driver;
 
     @BeforeTest
-    public void setup(){
+    public void setup() {
         driver = new FirefoxDriver();
         driver.manage().window().maximize();
         driver.get(Constants.URL);
     }
-
-
 }
